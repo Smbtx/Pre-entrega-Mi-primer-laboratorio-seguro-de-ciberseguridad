@@ -20,93 +20,40 @@ Para este laboratorio se utilizó VirtualBox y una máquina virtual con sistema 
 
 Antes de comenzar las prácticas se configuró la interfaz de red de la máquina virtual utilizando el modo NAT (Network Address Translation).
 
-
-
 **Evidencia:**
 
-
-
-**\[CAPTURA 01 — Configuración de red de VirtualBox mostrando el modo NAT]**
-
+<img width="819" height="514" alt="5 - Captura de pantalla MV  Windows inicio - configuracion de red NAT" src="https://github.com/user-attachments/assets/e2a01bc4-0adf-4320-8e43-8195a4fcdcb8" />
 
 
 La configuración se realizó desde:
-
-
-
 VirtualBox → Configuración → Red → Adaptador 1 → Conectado a: NAT
 
-
-
 **2.2 Justificación**
-
-
-
 Se seleccionó el modo NAT porque permite que la máquina virtual tenga acceso a Internet para realizar tareas como descargar actualizaciones y herramientas, sin exponerla directamente como un dispositivo independiente dentro de la red local.
-
-
-
 De esta manera, la máquina virtual queda en un entorno más controlado que utilizando el modo Puente (Bridged Adapter), donde la VM podría aparecer en la red local como otro equipo.
-
-
-
 Esta configuración constituye una primera medida de aislamiento del laboratorio y reduce la exposición innecesaria del sistema Host frente a las actividades que se realizarán posteriormente dentro de la máquina virtual.
-
-
 
 3\_ Capa Windows: usuarios y actualizaciones
 
 3.1 Creación de un usuario estándar
-
-
-
 Como medida de seguridad se creó un usuario destinado a las prácticas con permisos estándar, separado de la cuenta administrativa.
-
-
-
 **Evidencia:**
+<img width="1033" height="469" alt="8- Captura de pantalla MV  Windows inicio - usuario estandart" src="https://github.com/user-attachments/assets/a2ddb220-e185-4cfd-9034-5349291479b6" />
 
-
-
-**\[CAPTURA 02 — Cuentas de usuario mostrando el usuario estándar]**
-
+<img width="707" height="568" alt="7 - Captura de pantalla MV  Windows inicio - usuario administrador" src="https://github.com/user-attachments/assets/dab9fe21-89a4-43d9-bdbf-b839c134fa7b" />
 
 
 El objetivo de utilizar una cuenta sin privilegios administrativos para las actividades habituales es aplicar el principio de mínimo privilegio.
-
-
-
 Este principio establece que cada usuario debería disponer únicamente de los permisos necesarios para realizar sus tareas. De esta forma, si una aplicación o actividad realizada durante una práctica se ve comprometida, se limita el nivel de acceso que podría obtener.
-
-
-
 La cuenta administrativa queda reservada para tareas que realmente requieran privilegios elevados.
 
-
-
 **3.2** Actualización del sistema operativo
-
-
-
 Se verificó el estado de actualización del sistema operativo mediante Windows Update.
-
-
-
 **Evidencia:**
-
-
-
-**\[CAPTURA 03 — Windows Update mostrando el estado de actualización]**
-
-
+<img width="751" height="697" alt="11 - Captura de pantalla MV  Windows inicio - windows actualizado" src="https://github.com/user-attachments/assets/f6a7f3d6-906c-4a49-8cf9-12079b1058f4" />
 
 Mantener el sistema operativo actualizado es una medida fundamental de seguridad, ya que las actualizaciones pueden incluir correcciones de vulnerabilidades, errores y problemas de seguridad detectados por el fabricante.
-
-
-
 Antes de utilizar la máquina virtual para prácticas de ciberseguridad, se considera importante partir de un sistema actualizado para reducir la exposición a vulnerabilidades conocidas.
-
-
 
 4\. Capa Linux: permisos y gestión
 
